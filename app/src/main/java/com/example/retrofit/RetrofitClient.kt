@@ -10,4 +10,11 @@ object RetrofitClient {
             .addConverterFactory(MoshiConverterFactory.create())
             .build().create(WebService::class.java)
     }
+
+    val wcjService by lazy {
+        Retrofit.Builder()
+            .baseUrl("https://wcj-dev-api.polimentes.com")
+            .addConverterFactory(MoshiConverterFactory.create())
+            .build().create(WebService::class.java)
+    }
 }

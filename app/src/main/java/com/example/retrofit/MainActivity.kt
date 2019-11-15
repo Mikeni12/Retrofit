@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.firstTodo.observe(this, Observer{
             Log.d("http", it.toString())
         })
+        viewModel.juices.observe(this, Observer{
+            Log.d("http", it.toString())
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
